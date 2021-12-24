@@ -60,11 +60,11 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
         }
 
         updatedCart.push(newProduct);
-      }
 
+      }
       setCart(updatedCart);
       localStorage.setItem('@RocketShoes:cart', JSON.stringify(updatedCart));
-      toast.error('Quantidade solicitada fora de estoque');
+
     } catch {
       toast.error('Erro na adição do produto'); 
     }
